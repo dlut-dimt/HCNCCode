@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 This package includes all necessary source codes for shape matching with Hierarchical Projective Invariant Contexts. 
 
