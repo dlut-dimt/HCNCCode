@@ -10,6 +10,7 @@ function [ ratio ] = characterRatio( u ,v, p1, p2, p3)
 %   *Output*
 %   ratio:  character ratio value.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 switch nargin
     case 2
         u(:,end+1)=v;
@@ -44,7 +45,7 @@ end
 n=size(u,2);
 if(n<1)
     error('Arguments not enough.character.');
-elseif(n<3)
+elseif(n<3) % 
     ratio=0;
     return;
 end
@@ -52,7 +53,6 @@ end
 ratio=1;
 for i=3:n
     C=cross(u(1,[1 2 i]),u(2,[1 2 i]));
-    %disp(C);
     if(any(C==0) && size(u,1)==3)
             C=cross(u(1,[1 2 i]),u(3,[1 2 i]));
     end
